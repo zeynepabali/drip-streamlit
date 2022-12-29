@@ -14,7 +14,7 @@ interfaces_df = pd.read_csv('data/interfaces_table.csv')
 ligands_df = pd.read_csv('data/ligands_table.csv')
 
 
-with st.sidebar():
+with st.sidebar:
     pdb_selection = st.multiselect("Filter by PDB ID", proteins_df.pdbID)
 
 if len(pdb_selection) > 0:
