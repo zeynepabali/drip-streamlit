@@ -4,15 +4,25 @@ import numpy as np
 from stmol import showmol, render_pdb
 import py3Dmol
 from datetime import datetime
+from PIL import Image
 from st_aggrid import AgGrid, GridOptionsBuilder, JsCode
 
 st.set_page_config(layout="wide")
-st.title("PDB Entries")
+
 
 proteins_df = pd.read_csv('data/proteins_table.csv')
 interfaces_df = pd.read_csv('data/interfaces_table.csv')
 ligands_df = pd.read_csv('data/ligands_table.csv')
 
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.title("DiPPI")
+
+with col2:
+    logo_image = Image.open("data/drip_image.jfif")
+    st.image(logo_image)
 
 with st.sidebar:
     pdb_selection = st.multiselect("Filter by PDB ID", proteins_df.pdbID)
