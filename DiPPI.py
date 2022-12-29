@@ -22,7 +22,7 @@ with col1:
 
 with col2:
     logo_image = Image.open("data/drip_image.jfif")
-    st.image(logo_image, width=150)
+    st.image(logo_image, width=300)
 
 with st.sidebar:
     pdb_selection = st.multiselect("Filter by PDB ID", proteins_df.pdbID)
