@@ -16,7 +16,7 @@ ligands_df = pd.read_csv('data/ligands_table.csv')
 
 with st.sidebar:
     pdb_selection = st.multiselect("Filter by PDB ID", proteins_df.pdbID)
-    #ligand_selection = st.multiselect("Filter by ligand ID", proteins_df.ligands)
+    ligand_selection = st.multiselect("Filter by ligand ID", ligands_df.ligands)
 
     if len(pdb_selection) > 0:
         proteins_df = proteins_df[proteins_df.pdbID.isin(pdb_selection)]
