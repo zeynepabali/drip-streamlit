@@ -13,7 +13,7 @@ proteins_df = pd.read_csv('data/proteins_table.csv')
 interfaces_df = pd.read_csv('data/interfaces_table.csv')
 ligands_df = pd.read_csv('data/ligands_table.csv')
 
-int_builder = GridOptionsBuilder.from_dataframe(proteins_df[["pdbID", "fda_approved", "num_interfaces", "num_ligands", "interface_str", "ligand_str"]])
+int_builder = GridOptionsBuilder.from_dataframe(proteins_df[["pdbID", "fda", "num_interfaces", "num_ligands", "interface_str", "ligand_str"]])
 int_builder.configure_default_column(editable=False, filterable=False, cellStyle={'text-align': 'center'})
 int_builder.configure_column("pdbID", header_name="PDB ID", editable=False, )
 int_builder.configure_column("interface_str", header_name="Interfaces")
