@@ -17,12 +17,10 @@ ligands_df = pd.read_csv('data/ligands_table.csv')
 
 col1, col2 = st.columns(2)
 
-with col1:
-    st.title("DiPPI")
+logo_image = Image.open("data/drip_image.jfif")
+st.image(logo_image, width=400)
 
-with col2:
-    logo_image = Image.open("data/drip_image.jfif")
-    st.image(logo_image, width=300)
+st.title("DiPPI")
 
 with st.sidebar:
     pdb_selection = st.multiselect("Filter by PDB ID", proteins_df.pdbID)
