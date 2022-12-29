@@ -38,4 +38,5 @@ with st.spinner('Loading data...'):
                         theme='material',
                         enable_enterprise_modules=False,
                         gridOptions=int_builder.build(),
-                        fit_columns_on_grid_load=True)
+                        fit_columns_on_grid_load=True,
+                        custom_css={".ag-header-cell-label": {"justify-content": "center;"}})
