@@ -7,7 +7,7 @@ from datetime import datetime
 from PIL import Image
 from st_aggrid import AgGrid, GridOptionsBuilder, JsCode
 
-st.set_page_config(layout="wide")
+st.set_page_config(page_title="DiPPI", layout="wide")
 
 
 proteins_df = pd.read_csv('data/proteins_table.csv')
