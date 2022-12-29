@@ -20,7 +20,7 @@ int_builder.configure_column("interface_str", header_name="Interfaces")
 int_builder.configure_column("ligand_str", header_name="Ligands")
 int_builder.configure_column('num_interfaces', header_name="# of Interfaces")
 int_builder.configure_column("num_ligands", header_name="# of Ligands")
-int_builder.configure_column("fda_approved", header_name="FDA Approved")
+int_builder.configure_column("fda", header_name="FDA Approved")
 int_builder.configure_pagination(enabled=True, paginationAutoPageSize=False, paginationPageSize=20)
 int_builder.configure_selection('single', use_checkbox=True)
 
