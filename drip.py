@@ -21,7 +21,7 @@ int_builder.configure_column("ligands", header_name="Chain 2")
 int_builder.configure_column('fda_approved', header_name="# Chain 1")
 int_builder.configure_column("num_interfaces", header_name="# Chain 2")
 int_builder.configure_column("num_ligands", header_name="# Interface Residues")
-int_builder.configure_pagination(enabled=True, paginationAutoPageSize=False, paginationPageSize=int_select_pagination)
+int_builder.configure_pagination(enabled=True, paginationAutoPageSize=False, paginationPageSize=20)
 int_builder.configure_selection('single', use_checkbox=True)
 
 with st.spinner('Loading data...'):
